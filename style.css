@@ -1,0 +1,166 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+canvas#scene {
+    display: block;
+}
+
+#boot {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(130deg, #f8a17b, #654e8b);
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: clamp(45px, 9vw, 110px);
+    font-weight: 1000;
+    letter-spacing: 8px;
+    z-index: 4;
+    transition: opacity 1s;
+    text-shadow: 0 5px 25px #0007;
+}
+
+#boot small {
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+
+#ui {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    text-shadow: 0 2px 5px #000;
+}
+
+.logo {
+    position: absolute;
+    left: 25px;
+    top: 22px;
+    color: #ff9ed9;
+    font-weight: 900;
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+
+.logo small {
+    display: block;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+
+.top {
+    position: absolute;
+    right: 25px;
+    top: 22px;
+    text-align: right;
+    font-size: 24px;
+}
+
+.top b {
+    display: block;
+    color: #80ff8b;
+    margin-top: 8px;
+}
+
+.mission {
+    position: absolute;
+    right: 25px;
+    top: 105px;
+    background: #10141bd9;
+    padding: 15px 18px;
+    border-left: 3px solid #f58bcf;
+    width: 230px;
+}
+
+.mission small {
+    color: #f58bcf;
+    letter-spacing: 2px;
+}
+
+.mission strong {
+    display: block;
+    margin: 8px 0;
+}
+
+.mission p {
+    font-size: 12px;
+    color: #ddd;
+}
+
+.help {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    background: #10141bd9;
+    padding: 15px;
+    line-height: 1.8;
+    font-size: 12px;
+    border-left: 3px solid #7bdcff;
+}
+
+#map {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 160px;
+    height: 160px;
+    background: #202c36;
+    border: 2px solid #ffffff70;
+}
+
+#msg {
+    position: absolute;
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111b;
+    padding: 12px 20px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: .3s;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        left: 12px;
+        top: 12px;
+        font-size: 20px;
+    }
+
+    .top {
+        right: 12px;
+        top: 12px;
+        font-size: 17px;
+    }
+
+    .mission {
+        right: 10px;
+        top: 85px;
+        width: 180px;
+    }
+
+    .help {
+        left: 10px;
+        bottom: 10px;
+        font-size: 10px;
+    }
+
+    #map {
+        right: 10px;
+        bottom: 10px;
+        width: 125px;
+        height: 125px;
+    }
+}
